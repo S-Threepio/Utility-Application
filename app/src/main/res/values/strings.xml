@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Utility Application</string>
+    <string name="snack_bar_toast">Snack Bar and Toast</string>
+    <string name="show_snackbar">Show Snackbar</string>
+    <string name="show_toast">Show Toast</string>
+    <string name="show_snackbar_with_action_button">Show Snackbar with action button</string>
+    <string name="snackbar_with_color">Show SnackBar with custom color</string>
+    <string name="coordinator_layut_info">The root layout of this xml is Co-ordinator Layout. It is needed so that we can have interactions with snackbar available such as swipe to dismiss snackbar. CoOrdinator layout is used for controlling interactions within the views</string>
+    <string name="notifications">Notifications</string>
+</resources>
