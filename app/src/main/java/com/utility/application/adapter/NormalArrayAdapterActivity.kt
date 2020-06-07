@@ -37,7 +37,12 @@ class NormalArrayAdapterActivity : AppCompatActivity() {
             "four",
             "five"
         )
+        //here since we have data as just a list of text we can use the default array adapter
+        //we will use the simple_list_item_1 as our layout for each item
+        //initialize the adapter
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, dataList)
+
+        //set the adapter to our view
         normalListView.adapter = adapter
     }
 }

@@ -11,138 +11,40 @@ class CustomArrayAdapterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.custom_adapter)
         val dataList = ArrayList<MyData>()
-        dataList.add(
-            MyData(
-                "swanand",
-                "behaviour",
-                "good"
-            )
-        )
-        dataList.add(
-            MyData(
-                "saurabh",
-                "management",
-                "roleModel"
-            )
-        )
-        dataList.add(
-            MyData(
-                "raja",
-                "technical",
-                "strong"
-            )
-        )
-        dataList.add(
-            MyData(
-                "swanand",
-                "behaviour",
-                "good"
-            )
-        )
-        dataList.add(
-            MyData(
-                "saurabh",
-                "management",
-                "roleModel"
-            )
-        )
-        dataList.add(
-            MyData(
-                "raja",
-                "technical",
-                "strong"
-            )
-        )
-        dataList.add(
-            MyData(
-                "swanand",
-                "behaviour",
-                "good"
-            )
-        )
-        dataList.add(
-            MyData(
-                "saurabh",
-                "management",
-                "roleModel"
-            )
-        )
-        dataList.add(
-            MyData(
-                "raja",
-                "technical",
-                "strong"
-            )
-        )
-        dataList.add(
-            MyData(
-                "swanand",
-                "behaviour",
-                "good"
-            )
-        )
-        dataList.add(
-            MyData(
-                "saurabh",
-                "management",
-                "roleModel"
-            )
-        )
-        dataList.add(
-            MyData(
-                "raja",
-                "technical",
-                "strong"
-            )
-        )
-        dataList.add(
-            MyData(
-                "swanand",
-                "behaviour",
-                "good"
-            )
-        )
-        dataList.add(
-            MyData(
-                "saurabh",
-                "management",
-                "roleModel"
-            )
-        )
-        dataList.add(
-            MyData(
-                "raja",
-                "technical",
-                "strong"
-            )
-        )
-        dataList.add(
-            MyData(
-                "swanand",
-                "behaviour",
-                "good"
-            )
-        )
-        dataList.add(
-            MyData(
-                "saurabh",
-                "management",
-                "roleModel"
-            )
-        )
-        dataList.add(
-            MyData(
-                "raja",
-                "technical",
-                "strong"
-            )
-        )
 
+        //creating a dataList of our custom objects
+        for (i in 1..50)
+            dataList.addAll(
+                listOf(
+                    MyData(
+                        "swanand",
+                        "behaviour",
+                        "good"
+                    ),
+                    MyData(
+                        "saurabh",
+                        "management",
+                        "roleModel"
+                    )
+                    ,
+                    MyData(
+                        "raja",
+                        "technical",
+                        "strong"
+                    )
+                )
+            )
+
+        //to show our complex data object we will need our own adapter
+
+        //initializing the adapter
         val customAdapter = CustomArrayAdapter(
             this,
-            R.layout.activity_array_adapter,
+            0,
             dataList
         )
+
+        //setting the adapter
         listView.adapter = customAdapter
     }
 }

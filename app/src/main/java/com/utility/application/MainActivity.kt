@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import com.utility.application.adapter.ArrayAdapterActivity
 import com.utility.application.databinding.ActivityMainBinding
 import com.utility.application.notification.NotificationActivity
+import com.utility.application.recyclerview.RecyclerViewActivity
 import com.utility.application.snackbar.SnackBarActivity
 
 
@@ -35,6 +36,12 @@ class MainActivity : AppCompatActivity() {
     fun onClickAdapter(view: View) {
         intent = Intent()
         intent.setClass(this, ArrayAdapterActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onClickRecyclerView(view: View) {
+        intent = Intent()
+        intent.setClass(this, RecyclerViewActivity::class.java)
         startActivity(intent)
     }
 }

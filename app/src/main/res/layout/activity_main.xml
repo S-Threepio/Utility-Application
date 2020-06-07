@@ -32,5 +32,11 @@
             android:onClick="@{mainActivity::onClickAdapter}"
             android:text="@string/array_adapters" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{mainActivity::onClickRecyclerView}"
+            android:text="Recycler View" />
+
     </LinearLayout>
 </layout>
