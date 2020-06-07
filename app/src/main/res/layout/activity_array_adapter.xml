@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="adapterActivity"
+            type="com.utility.application.adapter.ArrayAdapterActivity" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{adapterActivity::onClickArrayAdapter}"
+            android:text="@string/array_adapter" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{adapterActivity::onClickCustomArrayAdapter}"
+            android:text="@string/custom_array_adapter" />
+
+    </LinearLayout>
+</layout>

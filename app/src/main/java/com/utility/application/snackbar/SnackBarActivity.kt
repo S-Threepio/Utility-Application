@@ -1,21 +1,22 @@
-package com.utility.application
+package com.utility.application.snackbar
 
 import android.graphics.Color
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.snackbar.Snackbar
+import com.utility.application.R
 import com.utility.application.databinding.ActivitySnackbarBinding
 
 class SnackBarActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val snackBarBinding: ActivitySnackbarBinding =
-            DataBindingUtil.setContentView(this, R.layout.activity_snackbar)
+            DataBindingUtil.setContentView(this,
+                R.layout.activity_snackbar
+            )
         snackBarBinding.snackBar = this
     }
 

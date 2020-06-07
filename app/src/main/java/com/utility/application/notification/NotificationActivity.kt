@@ -1,4 +1,4 @@
-package com.utility.application
+package com.utility.application.notification
 
 import android.app.Notification
 import android.os.Bundle
@@ -7,8 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.databinding.DataBindingUtil
-import com.utility.application.App.Companion.CHANNEL_1_ID
-import com.utility.application.App.Companion.CHANNEL_2_ID
+import com.utility.application.notification.App.Companion.CHANNEL_1_ID
+import com.utility.application.notification.App.Companion.CHANNEL_2_ID
+import com.utility.application.R
 import com.utility.application.databinding.ActivityNotificationBinding
 import kotlinx.android.synthetic.main.activity_notification.*
 
@@ -20,7 +21,9 @@ class NotificationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val notificationBinding: ActivityNotificationBinding =
-            DataBindingUtil.setContentView(this, R.layout.activity_notification)
+            DataBindingUtil.setContentView(this,
+                R.layout.activity_notification
+            )
         notificationManager = NotificationManagerCompat.from(this)
         notificationBinding.notificationActivity = this
     }

@@ -26,6 +26,11 @@
             android:layout_height="wrap_content"
             android:onClick="@{mainActivity::onClickNotification}"
             android:text="@string/notifications" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{mainActivity::onClickAdapter}"
+            android:text="@string/array_adapters" />
 
     </LinearLayout>
 </layout>

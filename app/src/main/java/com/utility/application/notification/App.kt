@@ -1,4 +1,4 @@
-package com.utility.application
+package com.utility.application.notification
 
 import android.app.Application
 import android.app.NotificationChannel
