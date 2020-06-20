@@ -16,5 +16,10 @@
     <string name="fragment_three_title">Fragment three</string>
     <string name="recycler_view">Recycler View</string>
     <string name="tabs_activity">Tabs Activity</string>
+    <string name="title_activity_navbar">NavbarActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="bottom_navbar">bottom navbar</string>
 
 </resources>

@@ -46,5 +46,11 @@
             android:onClick="@{mainActivity::onTabsClick}"
             android:text="@string/tabs_activity" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{mainActivity::onNavbarClick}"
+            android:text="@string/bottom_navbar" />
+
     </LinearLayout>
 </layout>

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.utility.application.adapter.ArrayAdapterActivity
 import com.utility.application.databinding.ActivityMainBinding
+import com.utility.application.navbar.NavbarActivity
 import com.utility.application.notification.NotificationActivity
 import com.utility.application.recyclerview.RecyclerViewActivity
 import com.utility.application.snackbar.SnackBarActivity
@@ -49,6 +50,12 @@ class MainActivity : AppCompatActivity() {
     fun onTabsClick(view: View) {
         intent = Intent()
         intent.setClass(this, TabActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onNavbarClick(view: View) {
+        intent = Intent()
+        intent.setClass(this, NavbarActivity::class.java)
         startActivity(intent)
     }
 }
