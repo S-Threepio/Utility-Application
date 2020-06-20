@@ -10,17 +10,26 @@ import android.view.Menu
 import android.view.MenuItem
 import com.utility.application.R
 import com.utility.application.tabs.ui.main.SectionsPagerAdapter
+import kotlinx.android.synthetic.main.activity_tab.*
 
 class TabActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tab)
+
+        //adapter to navigate between fragments
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
+
+        //setting the adapter to the viewpager
         val viewPager: ViewPager = findViewById(R.id.view_pager)
         viewPager.adapter = sectionsPagerAdapter
+
+        //setting up the view pager for tab layout
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
+
+        //optional floating button
         val fab: FloatingActionButton = findViewById(R.id.fab)
 
         fab.setOnClickListener { view ->
