@@ -10,6 +10,7 @@ import com.utility.application.databinding.ActivityMainBinding
 import com.utility.application.notification.NotificationActivity
 import com.utility.application.recyclerview.RecyclerViewActivity
 import com.utility.application.snackbar.SnackBarActivity
+import com.utility.application.tabs.TabActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -42,6 +43,12 @@ class MainActivity : AppCompatActivity() {
     fun onClickRecyclerView(view: View) {
         intent = Intent()
         intent.setClass(this, RecyclerViewActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onTabsClick(view: View) {
+        intent = Intent()
+        intent.setClass(this, TabActivity::class.java)
         startActivity(intent)
     }
 }

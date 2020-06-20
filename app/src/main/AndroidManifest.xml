@@ -3,6 +3,7 @@
     package="com.utility.application">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".notification.App"
         android:allowBackup="true"
@@ -11,6 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".tabs.TabActivity"
+            android:label="@string/title_activity_tab"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

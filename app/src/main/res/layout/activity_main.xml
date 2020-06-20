@@ -21,11 +21,13 @@
             android:layout_height="wrap_content"
             android:onClick="@{mainActivity::onClickSnackBar}"
             android:text="@string/snack_bar_toast" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="@{mainActivity::onClickNotification}"
             android:text="@string/notifications" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,7 +38,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="@{mainActivity::onClickRecyclerView}"
-            android:text="Recycler View" />
+            android:text="@string/recycler_view" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{mainActivity::onTabsClick}"
+            android:text="@string/tabs_activity" />
 
     </LinearLayout>
 </layout>

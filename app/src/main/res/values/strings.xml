@@ -10,4 +10,11 @@
     <string name="array_adapter">Array Adapter</string>
     <string name="custom_array_adapter">Custom Array Adapter</string>
     <string name="array_adapters">Array Adapters</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="fragment_one_title">Fragment one</string>
+    <string name="fragment_two_title">Fragment two</string>
+    <string name="fragment_three_title">Fragment three</string>
+    <string name="recycler_view">Recycler View</string>
+    <string name="tabs_activity">Tabs Activity</string>
+
 </resources>
