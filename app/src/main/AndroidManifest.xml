@@ -13,8 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".drawer.DrawerActivity"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".navbar.NavbarActivity"
-            android:label="@string/title_activity_navbar"></activity>
+            android:label="@string/title_activity_navbar" />
         <activity
             android:name=".tabs.TabActivity"
             android:label="@string/title_activity_tab"

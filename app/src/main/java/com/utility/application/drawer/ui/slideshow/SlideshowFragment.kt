@@ -1,4 +1,4 @@
-package com.utility.application.navbar.ui.home
+package com.utility.application.drawer.ui.slideshow
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.utility.application.R
 
-class HomeFragment : Fragment() {
+class SlideshowFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var slideshowViewModel: SlideshowViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home_tab, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+        slideshowViewModel =
+            ViewModelProviders.of(this).get(SlideshowViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
+        val textView: TextView = root.findViewById(R.id.text_slideshow)
+        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

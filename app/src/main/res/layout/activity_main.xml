@@ -52,5 +52,12 @@
             android:onClick="@{mainActivity::onNavbarClick}"
             android:text="@string/bottom_navbar" />
 
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{mainActivity::onDrawerClick}"
+            android:text="@string/drawer_activity" />
+
     </LinearLayout>
 </layout>
