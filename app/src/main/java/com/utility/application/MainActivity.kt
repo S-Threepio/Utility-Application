@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.utility.application.adapter.ArrayAdapterActivity
+import com.utility.application.async.AsyncActivity
 import com.utility.application.databinding.ActivityMainBinding
 import com.utility.application.drawer.DrawerActivity
 import com.utility.application.navbar.NavbarActivity
@@ -63,6 +64,12 @@ class MainActivity : AppCompatActivity() {
     fun onDrawerClick(view: View) {
         intent = Intent()
         intent.setClass(this, DrawerActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onAsyncClick(view: View) {
+        intent = Intent()
+        intent.setClass(this, AsyncActivity::class.java)
         startActivity(intent)
     }
 }

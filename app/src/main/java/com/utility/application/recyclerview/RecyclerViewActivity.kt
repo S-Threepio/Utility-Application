@@ -1,6 +1,7 @@
 package com.utility.application.recyclerview
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,10 +23,13 @@ class RecyclerViewActivity : AppCompatActivity() {
 
         //used to set the layout manager
         //layout manager will manage how the views will be placed inside a recycler view
-        recyclerView.layoutManager = LinearLayoutManager(this)
 
+        val adapter = NumbersAdapter(NumberClickListener {
+            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+        })
         //adapter wich will decide how to patch data into the recycler view
-        recyclerView.adapter = NumbersAdapter(dataList = dataList)
+        adapter.submitList(dataList)
+        recyclerView.adapter = adapter
 
         //Nested Scroll Layout is supposed to be used if we are putting recycler view is not the root layout
         //if nested scrolling is enabled then the functionality of recycler view will cease to exist

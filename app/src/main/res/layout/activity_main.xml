@@ -59,5 +59,11 @@
             android:onClick="@{mainActivity::onDrawerClick}"
             android:text="@string/drawer_activity" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{mainActivity::onAsyncClick}"
+            android:text="@string/asynchronous_task" />
+
     </LinearLayout>
 </layout>
