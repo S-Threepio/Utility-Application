@@ -36,6 +36,7 @@
     <string name="home_second">Home Second</string>
     <string name="drawer_activity">Drawer Activity</string>
     <string name="asynchronous_task">Asynchronous Task</string>
+    <string name="api_call">API call</string>
 
     <string-array name="labels_array">
         <item>Home</item>

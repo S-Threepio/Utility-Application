@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".async.AsyncActivity"></activity>
+        <activity android:name=".api.ApiActivity"></activity>
+        <activity android:name=".async.AsyncActivity" />
         <activity
             android:name=".drawer.DrawerActivity"
             android:label="@string/title_activity_drawer"

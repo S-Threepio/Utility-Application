@@ -21,6 +21,8 @@ class AsyncActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         //this scope will handle the jobs running on ui thread
         val scope = CoroutineScope(Dispatchers.Main + Job())
 
+
+        /*sleep for 10 seconds in background task*/
         scope.launch {
             textView2.text = "Hey lets start to Sleepppppp"
 

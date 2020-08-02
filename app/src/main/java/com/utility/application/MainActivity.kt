@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.utility.application.adapter.ArrayAdapterActivity
+import com.utility.application.api.ApiActivity
 import com.utility.application.async.AsyncActivity
 import com.utility.application.databinding.ActivityMainBinding
 import com.utility.application.drawer.DrawerActivity
@@ -70,6 +71,12 @@ class MainActivity : AppCompatActivity() {
     fun onAsyncClick(view: View) {
         intent = Intent()
         intent.setClass(this, AsyncActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onApiCall(view: View) {
+        intent = Intent()
+        intent.setClass(this, ApiActivity::class.java)
         startActivity(intent)
     }
 }
