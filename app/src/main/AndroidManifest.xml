@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".api.ApiActivity"></activity>
+        <activity
+            android:name=".broadcasts.BroadcastActivity"
+            android:enabled="true"
+            android:exported="true" />
+        <activity android:name=".api.ApiActivity" />
         <activity android:name=".async.AsyncActivity" />
         <activity
             android:name=".drawer.DrawerActivity"

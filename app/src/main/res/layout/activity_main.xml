@@ -9,7 +9,6 @@
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -70,6 +69,12 @@
             android:layout_height="wrap_content"
             android:onClick="@{mainActivity::onApiCall}"
             android:text="@string/api_call" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{mainActivity::onBroadcast}"
+            android:text="@string/broadcast" />
 
     </LinearLayout>
 </layout>

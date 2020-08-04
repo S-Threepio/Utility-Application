@@ -37,6 +37,15 @@
     <string name="drawer_activity">Drawer Activity</string>
     <string name="asynchronous_task">Asynchronous Task</string>
     <string name="api_call">API call</string>
+    <string name="broadcast">Broadcast</string>
+
+    <string name="power_connected">Power connected!</string>
+    <string name="power_disconnected">Power disconnected!</string>
+    <string name="custom_broadcast_toast">Custom Broadcast Received</string>
+    <string name="send_custom_broadcast">Send Custom Broadcast</string>
+    <string name="receiver_on">Receiver On</string>
+    <string name="receiver_off">Receiver Off</string>
+    <string name="unknown_action">unknown intent action</string>
 
     <string-array name="labels_array">
         <item>Home</item>

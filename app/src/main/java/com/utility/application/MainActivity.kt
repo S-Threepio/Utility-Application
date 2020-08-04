@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import com.utility.application.adapter.ArrayAdapterActivity
 import com.utility.application.api.ApiActivity
 import com.utility.application.async.AsyncActivity
+import com.utility.application.broadcasts.BroadcastActivity
 import com.utility.application.databinding.ActivityMainBinding
 import com.utility.application.drawer.DrawerActivity
 import com.utility.application.navbar.NavbarActivity
@@ -79,4 +80,13 @@ class MainActivity : AppCompatActivity() {
         intent.setClass(this, ApiActivity::class.java)
         startActivity(intent)
     }
+
+    fun onBroadcast(view: View) {
+        intent = Intent()
+        intent.setClass(this, BroadcastActivity::class.java)
+        startActivity(intent)
+    }
+
+
+
 }
