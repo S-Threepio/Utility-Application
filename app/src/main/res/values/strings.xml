@@ -46,6 +46,8 @@
     <string name="receiver_on">Receiver On</string>
     <string name="receiver_off">Receiver Off</string>
     <string name="unknown_action">unknown intent action</string>
+    <string name="cancel_me">Cancel Me!</string>
+    <string name="update_notification">Updates Notification of channel one</string>
 
     <string-array name="labels_array">
         <item>Home</item>
