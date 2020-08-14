@@ -48,6 +48,11 @@
     <string name="unknown_action">unknown intent action</string>
     <string name="cancel_me">Cancel Me!</string>
     <string name="update_notification">Updates Notification of channel one</string>
+    <string name="alarm_manager">Alarm Manager</string>
+    <string name="alarm_off">Alarm OFF</string>
+    <string name="alarm_on">Alarm ON</string>
+    <string name="alarm_on_toast">alarm is set to on</string>
+    <string name="alarm_off_toast">Alarm is set off</string>
 
     <string-array name="labels_array">
         <item>Home</item>

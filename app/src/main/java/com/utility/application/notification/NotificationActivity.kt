@@ -135,7 +135,6 @@ internal class NotificationActivity : AppCompatActivity() {
     }
 
     fun updateNotification() {
-
         val androidImage = BitmapFactory
             .decodeResource(resources, R.drawable.mascot_1)
         val notifyBuilder: NotificationCompat.Builder = getNotificationBuilder()

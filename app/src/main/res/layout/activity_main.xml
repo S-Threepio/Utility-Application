@@ -76,5 +76,11 @@
             android:onClick="@{mainActivity::onBroadcast}"
             android:text="@string/broadcast" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onAlarmClick"
+            android:text="@string/alarm_manager" />
+
     </LinearLayout>
 </layout>

@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.utility.application.adapter.ArrayAdapterActivity
+import com.utility.application.alarm.AlarmActivity
 import com.utility.application.api.ApiActivity
 import com.utility.application.async.AsyncActivity
 import com.utility.application.broadcasts.BroadcastActivity
@@ -87,6 +88,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun onAlarmClick(view: View) {
+        intent = Intent()
+        intent.setClass(this, AlarmActivity::class.java)
+        startActivity(intent)
+    }
 
 
 }
