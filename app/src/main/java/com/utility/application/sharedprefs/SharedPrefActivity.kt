@@ -1,9 +1,10 @@
 package com.utility.application.sharedprefs
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.utility.application.R
@@ -17,32 +18,33 @@ class SharedPrefActivity : AppCompatActivity() {
     // Current background color
     private var mColor = 0
 
-    // Text view to display both count and color
-    private var mShowCountTextView: TextView? = null
-
     // Key for current count
     private val COUNT_KEY = "count"
 
     // Key for current color
     private val COLOR_KEY = "color"
+
+    private var mPreferences: SharedPreferences? = null
+    private val sharedPrefFile = "com.utility.application.sharedprefs"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_pref)
 
         // Initialize views, color
-        mShowCountTextView = findViewById(R.id.count_textview)
         mColor = ContextCompat.getColor(
             this,
             R.color.default_background
         )
 
+        mPreferences = getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
         // Restore the saved instance state.
-        if (savedInstanceState != null) {
-            mCount = savedInstanceState.getInt(COUNT_KEY)
+        mPreferences?.let {
+            mCount = it.getInt(COUNT_KEY, 0)
             if (mCount != 0) {
                 count_textview?.text = String.format("%s", mCount)
             }
-            mColor = savedInstanceState.getInt(COLOR_KEY)
+            mColor = it.getInt(COLOR_KEY, mColor)
             count_textview?.setBackgroundColor(mColor)
         }
     }
@@ -56,7 +58,7 @@ class SharedPrefActivity : AppCompatActivity() {
      */
     fun changeBackground(view: View) {
         val color = (view.getBackground() as ColorDrawable).color
-        mShowCountTextView!!.setBackgroundColor(color)
+        count_textview!!.setBackgroundColor(color)
         mColor = color
     }
 
@@ -68,7 +70,7 @@ class SharedPrefActivity : AppCompatActivity() {
      */
     fun countUp(view: View?) {
         mCount++
-        mShowCountTextView!!.text = String.format("%s", mCount)
+        count_textview!!.text = String.format("%s", mCount)
     }
 
     /**
@@ -78,10 +80,14 @@ class SharedPrefActivity : AppCompatActivity() {
      *
      * @param outState The state data.
      */
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putInt(COUNT_KEY, mCount)
-        outState.putInt(COLOR_KEY, mColor)
+
+    override fun onPause() {
+        super.onPause()
+        mPreferences?.edit()?.apply {
+            this.putInt(COUNT_KEY, mCount)
+            this.putInt(COLOR_KEY, mColor)
+            this.apply()
+        }
     }
 
     /**
@@ -94,13 +100,18 @@ class SharedPrefActivity : AppCompatActivity() {
     fun reset(view: View?) {
         // Reset count
         mCount = 0
-        mShowCountTextView!!.text = String.format("%s", mCount)
+        count_textview!!.text = String.format("%s", mCount)
 
         // Reset color
         mColor = ContextCompat.getColor(
             this,
             R.color.default_background
         )
-        mShowCountTextView!!.setBackgroundColor(mColor)
+        count_textview!!.setBackgroundColor(mColor)
+
+        mPreferences?.edit()?.apply {
+            this.clear()
+            this.apply()
+        }
     }
 }
