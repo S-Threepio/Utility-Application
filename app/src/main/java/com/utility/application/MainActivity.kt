@@ -15,6 +15,8 @@ import com.utility.application.drawer.DrawerActivity
 import com.utility.application.navbar.NavbarActivity
 import com.utility.application.notification.NotificationActivity
 import com.utility.application.recyclerview.RecyclerViewActivity
+import com.utility.application.scheduler.SchedulerActivity
+import com.utility.application.sharedprefs.SharedPrefActivity
 import com.utility.application.snackbar.SnackBarActivity
 import com.utility.application.tabs.TabActivity
 
@@ -94,5 +96,15 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun onSchedule(view: View) {
+        intent = Intent()
+        intent.setClass(this, SchedulerActivity::class.java)
+        startActivity(intent)
+    }
 
+    fun onSharedPref(view: View) {
+        intent = Intent()
+        intent.setClass(this, SharedPrefActivity::class.java)
+        startActivity(intent)
+    }
 }

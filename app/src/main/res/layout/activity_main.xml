@@ -8,79 +8,97 @@
             type="com.utility.application.MainActivity" />
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
+        android:layout_height="wrap_content">
 
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{mainActivity::onClickSnackBar}"
-            android:text="@string/snack_bar_toast" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{mainActivity::onClickNotification}"
-            android:text="@string/notifications" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{mainActivity::onClickSnackBar}"
+                android:text="@string/snack_bar_toast" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{mainActivity::onClickAdapter}"
-            android:text="@string/array_adapters" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{mainActivity::onClickNotification}"
+                android:text="@string/notifications" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{mainActivity::onClickRecyclerView}"
-            android:text="@string/recycler_view" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{mainActivity::onClickAdapter}"
+                android:text="@string/array_adapters" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{mainActivity::onTabsClick}"
-            android:text="@string/tabs_activity" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{mainActivity::onClickRecyclerView}"
+                android:text="@string/recycler_view" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{mainActivity::onNavbarClick}"
-            android:text="@string/bottom_navbar" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{mainActivity::onTabsClick}"
+                android:text="@string/tabs_activity" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{mainActivity::onNavbarClick}"
+                android:text="@string/bottom_navbar" />
 
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{mainActivity::onDrawerClick}"
-            android:text="@string/drawer_activity" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{mainActivity::onDrawerClick}"
+                android:text="@string/drawer_activity" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{mainActivity::onAsyncClick}"
-            android:text="@string/asynchronous_task" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{mainActivity::onAsyncClick}"
+                android:text="@string/asynchronous_task" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{mainActivity::onApiCall}"
-            android:text="@string/api_call" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{mainActivity::onApiCall}"
+                android:text="@string/api_call" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{mainActivity::onBroadcast}"
-            android:text="@string/broadcast" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{mainActivity::onBroadcast}"
+                android:text="@string/broadcast" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onAlarmClick"
-            android:text="@string/alarm_manager" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onAlarmClick"
+                android:text="@string/alarm_manager" />
 
-    </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onSchedule"
+                android:text="@string/job_scheduler" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onSharedPref"
+                android:text="@string/shared_preferences" />
+        </LinearLayout>
+
+    </ScrollView>
 </layout>
